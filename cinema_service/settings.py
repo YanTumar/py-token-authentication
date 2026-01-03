@@ -2,9 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = (
-    "django-insecure-6vubhk2$++agnctay_4pxy_8cq)mosmn(*-#2b^v4cgsh-^!i3"
-)
+SECRET_KEY = "django-insecure-6vubhk2$++agnctay_4pxy_8cq)mosmn(*-#2b^v4cgsh-^!i3"
 
 DEBUG = True
 
@@ -32,9 +30,7 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework.authentication.TokenAuthentication",
     ),
-    "DEFAULT_PERMISSION_CLASSES": (
-        "rest_framework.permissions.IsAuthenticated",
-    ),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
 }
 
 MIDDLEWARE = [
@@ -81,16 +77,13 @@ AUTH_PASSWORD_VALIDATORS = [
         "UserAttributeSimilarityValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation."
-        "MinimumLengthValidator",
+        "NAME": "django.contrib.auth.password_validation." "MinimumLengthValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation."
-        "CommonPasswordValidator",
+        "NAME": "django.contrib.auth.password_validation." "CommonPasswordValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation."
-        "NumericPasswordValidator",
+        "NAME": "django.contrib.auth.password_validation." "NumericPasswordValidator",
     },
 ]
 
